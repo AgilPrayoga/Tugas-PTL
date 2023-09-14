@@ -1,6 +1,6 @@
 <?php
 // Koneksi ke database MySQL
-$koneksi = mysqli_connect("localhost", "root", "root","agilpacaripah");
+$koneksi = mysqli_connect("localhost", "root", "root", "db_agil");
 
 // Periksa koneksi
 if (mysqli_connect_errno()) {
@@ -16,7 +16,7 @@ $username = mysqli_real_escape_string($koneksi, $username);
 $password = mysqli_real_escape_string($koneksi, $password);
 
 // Query untuk mencari pengguna dengan username yang sesuai
-$query = "SELECT * FROM user WHERE name='$username' AND password='$password'";
+$query = "SELECT * FROM user WHERE username='$username' AND password='$password'";
 $result = mysqli_query($koneksi, $query);
 
 if (mysqli_num_rows($result) == 1) {
@@ -31,4 +31,3 @@ if (mysqli_num_rows($result) == 1) {
 
 // Tutup koneksi ke database
 mysqli_close($koneksi);
-?>
