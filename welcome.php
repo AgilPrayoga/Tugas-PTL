@@ -28,16 +28,16 @@ if (!isset($_SESSION['username'])) {
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href="welcome.php?p=beranda">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="welcome.php?p=kriteria">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="welcome.php?p=data">Data</a>
+          <a class="nav-link" href="welcome.php?p=data">management user </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
+          <a class="nav-link" href="#">Data</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#">Disabled</a>
+          <a class="nav-link disabled" href="#">Metode Wp</a>
         </li>
       </ul>
     </div>
@@ -55,12 +55,11 @@ if (!isset($_SESSION['username'])) {
         echo "Halaman tidak di temukan";
       }
     } else {
-      include($pages_dir . '/beranda.php');
+      include($pages_dir . '/kriteria.php');
     }
-
-
     ?>
   </div>
+   
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
