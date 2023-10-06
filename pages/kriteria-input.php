@@ -9,48 +9,39 @@
 
 </head>
 <body>
-<form>
+  <div class="container pt-5">
+    <div class="card p-5 w-75 m-auto"> 
+  <form  action="pages/kriteria-inputproses.php" method="post">
   <!-- Email input -->
   <div class="form-outline mb-4">
+    <label class="form-label" for="kriteria">Kriteria</label>
     <input type="text" id="kriteria" name="kriteria" placeholder="kriteria" class="form-control" />
-    <label class="form-label" for="kriteria">Kode</label>
   </div>
   <div class="form-outline mb-4">
+    <label class="form-label" for="bobot">Bobot</label>
     <input type="text" id="bobot" name="bobot" placeholder="bobot" class="form-control" />
-    <label class="form-label" for="kriteria">Nama</label>
   </div>
   <div class="form-outline mb-4">
-    <input type="text" id="bobot" name="bobot" placeholder="bobot" class="form-control" />
-    <label class="form-label" for="kriteria">Kategori</label>
+    <input type="radio" id="cost" name="attribut" value="cost" class="" />
+    <label class="form-label" for="cost">Cost</label>
+    <input type="radio" id="benefit" name="atrribut" value="benefit" class="" />
+    <label class="form-label" for="benefit">Benefit</label>
   </div>
-  <div class="form-outline mb-4">
-
-    <input type="text" id="bobot" name="bobot" placeholder="bobot" class="form-control" />
-    
-    <label class="form-label" for="kriteria">Bobot</label>
-  </div>
-
+ 
   
 
-  <!-- 2 column grid layout for inline styling -->
-  <div class="row mb-4">
-    <div class="col d-flex justify-content-center">
-      <!-- Checkbox -->
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="form1Example3" checked />
-        <label class="form-check-label" for="form1Example3"> Remember me </label>
-      </div>
-    </div>
-
-    <div class="col">
-      <!-- Simple link -->
-      <a href="#!">Forgot password?</a>
-    </div>
-  </div>
+ 
 
   <!-- Submit button -->
-  <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+  <button type="submit" name="simpan" class="btn btn-success btn-block">Simpan</button>
+  <button type="reset" class="btn btn-danger btn-block">Reset</button>
+
+  <a href="welcome.php?p=kriteria" class="btn btn-warning btn-block">Kembali</a>
 </form>
+</div>
+  </div>
+
+
     
 
 
