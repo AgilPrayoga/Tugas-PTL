@@ -1,14 +1,14 @@
 <?php
 include '../konsdb.php';
 
-$sql="DROP TABLE DataAl_buff";
+$sql="DROP TABLE DataAL_Buff ";
 if($koneksi->query($sql)===true){
     echo "Drop Table Data AL berhasil!!";
 }else{
     echo"Error,Gagal membuat table".$koneksi->error;
 }
 
-$sql ="CREATE TABLE DataAl_buff (id INT (6))";
+$sql ="CREATE TABLE DataAL_Buff (id INT (6))";
 
 if ($koneksi->query($sql)===true){
     echo "Membuat Table Data AL berhasil!!";
@@ -17,14 +17,14 @@ if ($koneksi->query($sql)===true){
 }
 
 
-$kriteria=$_POST['kriteria'];
-$bobot=$_POST['bobot'];
-$attribut=$_POST['attribut'];
+$alternatif=$_POST['alternatif'];
+$keterangan=$_POST['keterangan'];
+
 
 if(isset($_POST['simpan'])){
-    $sql="INSERT INTO kriteria(kriteria,bobot,attribut)VALUES('$kriteria','$bobot','$attribut')";
+    $sql="INSERT INTO alternatif(alternatif,keterangan)VALUES('$alternatif','$keterangan')";
     $query = mysqli_query($koneksi,$sql);
-    header("location:../welcome.php?p=kriteria");
+    header("location:../welcome.php?p=alternatif");
 }
 
 

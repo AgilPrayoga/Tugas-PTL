@@ -26,7 +26,7 @@
                     <a href="welcome.php?p=alternatif"class="nav-link">alternatif</a>
                 </li>
                 <li class=" nav-item">
-                    <a href="welcome.php?p=data"class="nav-link">Data</a>
+                    <a href="welcome.php?p=dataAL"class="nav-link">Data</a>
                 </li>
             </ul>
         </div>

@@ -11,22 +11,17 @@
 <body>
   <div class="container pt-5">
     <div class="card p-5 w-75 m-auto"> 
-  <form  action="pages/kriteria-inputproses.php" method="post">
+  <form  action="pages/alternatif-inputproses.php" method="post">
   <!-- Email input -->
   <div class="form-outline mb-4">
-    <label class="form-label" for="kriteria">Kriteria</label>
-    <input type="text" id="kriteria" name="kriteria" placeholder="kriteria" class="form-control" />
+    <label class="form-label" for="alternatif">Alternatif</label>
+    <input type="text" id="alternatif" name="alternatif" placeholder="Alternatif" class="form-control" />
   </div>
   <div class="form-outline mb-4">
-    <label class="form-label" for="bobot">Bobot</label>
-    <input type="text" id="bobot" name="bobot" placeholder="bobot" class="form-control" />
+    <label class="form-label" for="keterangan">Keterangan</label>
+    <input type="text" id="keterangan" name="keterangan" placeholder="keterangan" class="form-control" />
   </div>
-  <div class="form-outline mb-4">
-    <input type="radio" id="benefit" name="attribut" value="benefit" class="" />
-    <label class="form-label" for="benefit">Benefit</label>
-    <input type="radio" id="cost" name="attribut" value="cost" class="" />
-    <label class="form-label" for="cost">Cost</label>
-  </div>
+  
  
   
 
