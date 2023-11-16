@@ -29,36 +29,33 @@
         }
     }    
     
-    if(isset($_POST['simpan'])){	
+    if (isset($_POST['simpan'])) {
         $sqlal = "SELECT alternatif FROM alternatif";
         $resultal = $koneksi->query($sqlal);
-        if ($resultal->num_rows > 0) {            
+        if ($resultal->num_rows > 0) {
             $i = 1;
-            while($rowal = $resultal->fetch_assoc()) {
-                $sql ="UPDATE DataAl SET ";
+            while ($rowal = $resultal->fetch_assoc()) {
+                $sql = "UPDATE DataAl SET ";
                 $sqlkr = "SELECT kriteria FROM kriteria";
                 $resultkr = $koneksi->query($sqlkr);
                 if ($resultkr->num_rows > 0) {
                     $j = 1;
-                    while($rowkr = $resultkr->fetch_assoc()) {
-                        $sql = $sql.$rowkr["kriteria"]." = ";
-                        //echo $sql."<br>";
-                        $data = $_POST['dt'.$i.$j];
-                        $sql = $sql."'".$data."'";
-                        if($j < $jklm)
-                        {
-                            $sql = $sql.", ";
+                    while ($rowkr = $resultkr->fetch_assoc()) {
+                        $sql = $sql . "`" . $rowkr["kriteria"] . "` = "; // Use backticks for column names
+                        $data = $_POST['dt' . $i . $j];
+                        $sql = $sql . "'" . $data . "'";
+                        if ($j < $jklm) {
+                            $sql = $sql . ", ";
                         }
                         $j++;
-                    }                        
-                }                    
-                $sql = $sql." WHERE alternatif = '".$rowal["alternatif"]."';";       
-                       
+                    }
+                }
+                $sql = $sql . " WHERE `alternatif` = '" . $rowal["alternatif"] . "';"; // Use backticks for column names
                 echo $sql;
                 $query = mysqli_query($koneksi, $sql);
                 $i++;
-            }                
-        }            
+            }
+        }
         header("location:welcome.php?p=dataAL");
     }
 ?>

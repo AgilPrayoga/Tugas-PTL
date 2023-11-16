@@ -16,33 +16,33 @@
 
 
     <div class="container">
-        <div class="container">
-            <h4>Pilih Menu untuk melengkapi data :</h4>
+        <div class="container pt-5">
+        <h4 class="my-5 text-center fw-bold" >METODE WP</h4>
             <ul class="nav nav-pills nav-justified">
                 <li class=" nav-item">
-                    <a href="welcome.php?p=kriteria"class="nav-link ">Kriteria</a>
+                    <a href="welcome.php?p=kriteria"class="nav-link  ">Kriteria</a>
                 </li>
                 <li class=" nav-item">
-                    <a href="welcome.php?p=alternatif"class="nav-link active">alternatif</a>
+                    <a href="welcome.php?p=alternatif"class="nav-link bg-secondary text-white active">alternatif</a>
                 </li>
                 <li class=" nav-item">
                     <a href="welcome.php?p=dataAL"class="nav-link">Data</a>
                 </li>
             </ul>
         </div>
-        <div class="m-3">
-            <a href="welcome.php?p=alternatif-input" class="btn btn-primary"> Tambah Alternatif</a>
+        <div class="my-3">
+            <a href="welcome.php?p=alternatif-input" class="btn btn-success"> Tambah Alternatif</a>
         </div>
         <div>
        
             <h1 class="text-center"></h1>
-            <table class="table table-bordered table-dark">
+            <table class="table table-striped">
                 <thead>
                     <tr>
-                        <th scope="col">Nomor</th>
-                        <th scope="col">alternatif</th>
-                        <th scope="col">keterangan</th>
-                        <th scope="col">action</th>
+                        <th scope="col">NO</th>
+                        <th scope="col">Alternatif</th>
+                        <th scope="col">Keterangan</th>
+                        <th scope="col">Action</th>
                     </tr>
                 </thead>
                 <?php 
@@ -73,6 +73,11 @@
                         <td><?php echo $nomor ?></td>
                         <td><?php echo $r_tampil_alternatif['alternatif']; ?></td>
                         <td><?php echo $r_tampil_alternatif['keterangan']; ?></td>
+                        <td>
+                        <a href="welcome.php?p=delete_alternatif&id=<?php echo urlencode($r_tampil_alternatif['id']); ?>"
+                                        class="btn btn-danger"
+                                        onclick="return confirm('apakah anda yakin ingin menghapus item?')">Delete</a>
+                        </td>
                        
                         
                     </tr>
@@ -80,7 +85,7 @@
          $nomor++; }
         }
         else{
-            echo"table tidak ditemukan";
+            // echo"table tidak ditemukan";
         }
                    
                    

@@ -1,6 +1,6 @@
 
-<div class="container">
-            <h4>Pilih Menu untuk melengkapi data :</h4>
+<div class="container pt-5">
+            <h4 class="my-5 text-center fw-bold" >METODE WP</h4>
             <ul class="nav nav-pills nav-justified">
                 <li class=" nav-item">
                     <a href="welcome.php?p=kriteria"class="nav-link ">Kriteria</a>
@@ -9,7 +9,7 @@
                     <a href="welcome.php?p=alternatif"class="nav-link">alternatif</a>
                 </li>
                 <li class=" nav-item">
-                    <a href="welcome.php?p=dataAL"class="nav-link active">Data</a>
+                    <a href="welcome.php?p=dataAL"class="nav-link bg-secondary text-white active">Data</a>
                 </li>
             </ul>
         </div>
@@ -118,14 +118,14 @@
 
         //membuat table DataAL_Buff
         $sql = "CREATE TABLE DataAL_buff (
-        id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-        alternatif VARCHAR(25), ";
-        
-        for($i=0;$i<$x-1;$i++) {            
-            $sql = $sql."$krr[$i] FLOAT, ";
+            id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+            alternatif VARCHAR(25), ";
+            
+        for ($i = 0; $i < $x - 1; $i++) {            
+            $sql .= "`$krr[$i]` FLOAT, ";
         }
-        $xx=$x-1;
-        $sql = $sql."$krr[$xx] FLOAT)";
+        $xx = $x - 1;
+        $sql .= "`$krr[$xx]` FLOAT)";
 
         if ($koneksi->query($sql) === TRUE) {
         } else {

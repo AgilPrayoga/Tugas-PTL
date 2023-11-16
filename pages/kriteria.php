@@ -1,14 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-
-</head>
 
 <body>
 
@@ -16,11 +5,11 @@
 
 
     <div class="container">
-        <div class="container">
-            <h4>Pilih Menu untuk melengkapi data :</h4>
+        <div class="container pt-5">
+        <h4 class="my-5 text-center fw-bold" >METODE WP</h4>
             <ul class="nav nav-pills nav-justified">
                 <li class=" nav-item">
-                    <a href="#"class="nav-link active">Kriteria</a>
+                    <a href="#"class="nav-link bg-secondary text-white active">Kriteria</a>
                 </li>
                 <li class=" nav-item">
                     <a href="welcome.php?p=alternatif"class="nav-link">alternatif</a>
@@ -30,20 +19,20 @@
                 </li>
             </ul>
         </div>
-        <div class="m-3">
-            <a href="welcome.php?p=kriteria-input" class="btn btn-primary"> Tambah Kriteria</a>
+        <div class="my-3">
+            <a href="welcome.php?p=kriteria-input" class="btn btn-success"> Tambah Kriteria</a>
         </div>
         <div>
        
             <h1 class="text-center"></h1>
-            <table class="table table-bordered table-dark">
-                <thead>
+            <table class="table table-striped">
+            <thead>
                     <tr>
-                        <th scope="col">no</th>
-                        <th scope="col">kriteria</th>
-                        <th scope="col">bobot</th>
-                        <th scope="col">atribut</th>
-                        <th scope="col">action</th>
+                        <th scope="col">NO</th>
+                        <th scope="col">Kriteria</th>
+                        <th scope="col">Bobot</th>
+                        <th scope="col">Atribut</th>
+                        <th scope="col">Action</th>
                     </tr>
                 </thead>
                 <?php 
@@ -75,13 +64,18 @@
                         <td><?php echo $r_tampil_kriteria['kriteria']; ?></td>
                         <td><?php echo $r_tampil_kriteria['bobot']; ?></td>
                         <td><?php echo $r_tampil_kriteria['attribut']; ?></td>
+                        <td>
+                        <a href="welcome.php?p=delete_kriteria&id=<?php echo urlencode($r_tampil_kriteria['id']); ?>"
+                                        class="btn btn-danger"
+                                        onclick="return confirm('apakah anda yakin ingin menghapus item?')">Delete</a>
+                        </td>
                         
                     </tr>
                    <?php
          $nomor++; }
         }
         else{
-            echo"table tidak ditemukan";
+            // echo"table tidak ditemukan";
         }
                    
                    
@@ -92,9 +86,7 @@
     </div>
 
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-
+    
         
 </body>
 

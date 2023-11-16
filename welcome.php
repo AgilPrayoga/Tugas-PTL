@@ -20,27 +20,30 @@ if (!isset($_SESSION['username'])) {
 
 <body style="background-color: #eaeaea;">
 
-  <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #88d3eb!important;">
-    <a class="navbar-brand" href="#">Navbar</a>
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top " style="background-color: #563d7c!important;">
+  <div class="container  d-flex">
+    <a class="navbar-brand text-white fw-bold " href="#"> METODE WP</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href="welcome.php?p=kriteria">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link text-white" href="welcome.php?p=kriteria">Home </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="welcome.php?p=data">management user </a>
+          <a class="nav-link text-white" href="welcome.php?p=kriteria">Data</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Data</a>
+          <a class="nav-link text-white " href="welcome.php?p=metodewp">Metode Wp</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#">Metode Wp</a>
+          <a class="nav-link text-white " href="welcome.php?p=hasilwp">Hasil Wp</a>
         </li>
       </ul>
     </div>
+  </div>
+    
   </nav>
   <div>
     <?php
