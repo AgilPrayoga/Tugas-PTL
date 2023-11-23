@@ -1,16 +1,5 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "root";
-$dbname = "db_agil";
-
-// Create connection
-$koneksi = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($koneksi->connect_error) {
-    die("Connection failed: " . $koneksi->connect_error);
-}
+include 'konsdb.php';
 
 // Check if the ID parameter is set in the URL
 if (isset($_GET['id'])) {

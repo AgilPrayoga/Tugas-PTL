@@ -1,14 +1,9 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "root";
-$dbname = "db_agil";
+$koneksi = mysqli_connect("localhost", "root", "root", "db_agil");
 
-// Create connection
-$koneksi = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($koneksi->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
+// Periksa koneksi
+if (mysqli_connect_errno()) {
+    die("Koneksi ke database gagal: " . mysqli_connect_error());
 }
 
 
