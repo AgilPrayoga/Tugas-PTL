@@ -12,7 +12,7 @@
                     <a href="#"class="nav-link bg-secondary text-white active">Kriteria</a>
                 </li>
                 <li class=" nav-item">
-                    <a href="welcome.php?p=alternatif"class="nav-link">alternatif</a>
+                    <a href="welcome.php?p=alternatif"class="nav-link">Alternatif</a>
                 </li>
                 <li class=" nav-item">
                     <a href="welcome.php?p=dataAL"class="nav-link">Data</a>
