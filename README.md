@@ -3,7 +3,7 @@
 #### 2.extrak di local server biasanya di htdoc ####
 #### 3.buat database dengan nama "db_agil" jalankan import sql ke dalam php my admin(klo error berarti masukan sql manual) ####
 #### 4.baru jalankan browser ####
-#### 5.masuk ke halaman "localhost/agilweb" ####
+#### 5.masuk ke halaman "localhost/{{namafoldernya}}" ####
 #### 6.baru coba jalankan ####
 #### 7.cihuyy tugas pak rheo selesaiii ####
 #### salam manjah dari agil 😘😘😘😘 ####
