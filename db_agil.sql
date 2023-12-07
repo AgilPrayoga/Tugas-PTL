@@ -31,7 +31,7 @@ CREATE TABLE `alternatif` (
   `id` int NOT NULL,
   `alternatif` varchar(255) NOT NULL,
   `keterangan` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ;
 
 --
 -- Dumping data untuk tabel `alternatif`
@@ -65,7 +65,7 @@ CREATE TABLE `dataal` (
   `c5` float DEFAULT NULL,
   `c6` float DEFAULT NULL,
   `c7` float DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ;
 
 --
 -- Dumping data untuk tabel `dataal`
@@ -99,7 +99,7 @@ CREATE TABLE `dataal_buff` (
   `c5` float DEFAULT NULL,
   `c6` float DEFAULT NULL,
   `c7` float DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ;
 
 --
 -- Dumping data untuk tabel `dataal_buff`
@@ -128,7 +128,7 @@ CREATE TABLE `kriteria` (
   `kriteria` varchar(255) NOT NULL,
   `bobot` float NOT NULL,
   `attribut` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ;
 
 --
 -- Dumping data untuk tabel `kriteria`
@@ -154,7 +154,7 @@ CREATE TABLE `rankwp` (
   `Nama` varchar(30) DEFAULT NULL,
   `Rank` int DEFAULT NULL,
   `NilaiV` float DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ;
 
 --
 -- Dumping data untuk tabel `rankwp`
@@ -182,7 +182,7 @@ CREATE TABLE `user` (
   `id` int NOT NULL,
   `username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ;
 
 --
 -- Dumping data untuk tabel `user`
